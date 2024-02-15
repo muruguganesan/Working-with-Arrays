@@ -1,0 +1,29 @@
+// Scenario: You have an array. Return the array in which each element is multiplied by 2
+
+const myArr = [1,2,3,4,5];
+let myArrLen = myArr.length;
+
+// Method 1: For
+let newArr = [];
+for(let i = 0;i<myArrLen;i++) {
+  let myValue = myArr[i]*2;
+  newArr.push(myValue);
+}
+console.log("Output using For ",newArr);
+
+// Method 2: For of 
+newArr = [];
+for(let ele of myArr) {
+  newArr.push(ele*2);
+}
+console.log("Output using For of ",newArr);
+
+// Method 3: Map Method
+newArr = [];
+newArr = myArr.map((ele)=>ele*2);
+console.log("Output using Map ",newArr);
+
+// Method 4: For Each Method
+newArr = [];
+myArr.forEach((ele)=>newArr.push(ele*2));
+console.log("Output using For Each ",newArr);
