@@ -1,0 +1,28 @@
+// Scenario: You have an array of names and you want to convert all names to uppercase.
+
+const names = ['John', 'Jane', 'Doe'],
+      namesLen = names.length;
+
+// Using For Loop
+let namesCapsArr = [];
+for(let i=0;i<namesLen;i++) {
+  namesCapsArr.push(names[i].toUpperCase());
+}
+console.log("Names Array in Capital Letter using For Loop ", namesCapsArr);
+
+// Using For of Loop
+namesCapsArr = [];
+for(let ele of names) {
+  namesCapsArr.push(ele.toUpperCase());
+}
+console.log("Names Array in Capital Letter using For of Loop ", namesCapsArr);
+
+// Using Map Method
+namesCapsArr = [];
+namesCapsArr = names.map((ele)=>ele.toUpperCase());
+console.log("Names Array in Capital Letter using Map Method ", namesCapsArr);
+
+// Using forEach Method
+namesCapsArr = [];
+names.forEach((ele)=>namesCapsArr.push(ele.toUpperCase()));
+console.log("Names Array in Capital Letter using forEach Method ", namesCapsArr);
