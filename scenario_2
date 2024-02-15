@@ -1,0 +1,33 @@
+// Scenario: You have an array of user objects and you want to extract only their IDs into a new array.
+
+const users = [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Jane' },
+  { id: 3, name: 'Doe' }
+];
+let usersLen = users.length,
+    userIdArr = [];
+
+// Using For Loop
+for(let i=0;i<usersLen;i++) {
+  userIdArr.push(users[i].id);
+}
+console.log("User Id Array using for Loop ", userIdArr);
+
+// Using For of Loop
+userIdArr = [];
+for(let ele of users) {
+  userIdArr.push(ele.id);
+}
+console.log("User Id Array using for of Loop ", userIdArr);
+
+// Using Map Method
+userIdArr = [];
+userIdArr = users.map((ele)=>ele.id);
+console.log("User Id Array using Map Function ", userIdArr);
+
+// Using forEach Method
+userIdArr = [];
+users.forEach((ele)=>userIdArr.push(ele.id));
+console.log("User Id Array using forEach Function ", userIdArr);
+
