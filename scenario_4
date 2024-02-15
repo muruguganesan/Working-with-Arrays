@@ -1,0 +1,34 @@
+// Scenario: You have an array of numbers and you want to increment each number by its index.
+
+const numbers = [1, 2, 3, 4, 5],
+      numbersLen = numbers.length;
+
+// Using For Loop
+let newNumArr = [];
+for(let i=0;i<numbersLen;i++) {
+  newNumArr.push(numbers[i]+i);
+}
+console.log("New Array using For Loop",newNumArr);
+
+// Using For Of Loop
+newNumArr = [];
+let i = 0;
+for(let ele of numbers) {
+  newNumArr.push(ele+i);
+  i++;
+}
+console.log("New Array using For of Loop",newNumArr);
+
+// Using forEach Method
+newNumArr = [];
+i = 0;
+numbers.forEach((ele)=>{
+  newNumArr.push(ele+i);
+  i++;
+});
+console.log("New Array using forEach Method",newNumArr);
+
+// Using Map Method
+newNumArr = [];
+newNumArr = numbers.map((ele,index)=>ele+index);
+console.log("New Array using Map Method",newNumArr);
